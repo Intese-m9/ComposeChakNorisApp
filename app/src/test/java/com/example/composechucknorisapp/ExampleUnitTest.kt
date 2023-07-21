@@ -1,4 +1,4 @@
-package com.example.composechaknorisapp
+package com.example.composechucknorisapp
 
 import org.junit.Test
 

@@ -1,4 +1,4 @@
-package com.example.composechaknorisapp.presentation.ui.theme
+package com.example.composechucknorisapp.presentation.ui.theme
 
 import android.app.Activity
 import android.os.Build
