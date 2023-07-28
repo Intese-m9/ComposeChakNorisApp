@@ -25,7 +25,9 @@ class MainActivity : ComponentActivity() {
                     color = MaterialTheme.colorScheme.background
                 ) {
                     val chuckViewModel: ChuckViewModel by viewModels()
-                    HomeScreen(chuckUiState = chuckViewModel.chuckUiState, retryAction = { /*TODO*/ })
+                    HomeScreen(
+                        chuckUiState = chuckViewModel.chuckUiState,
+                        retryAction = { chuckViewModel.getRandomJoke() })
                 }
             }
         }

@@ -10,7 +10,7 @@ fun HomeScreen(
 ){
 when (chuckUiState){
     is ChuckUiState.Loading -> LoadingScreen()
-    is ChuckUiState.Success -> JokeCard(joke = chuckUiState.listChuck)
+    is ChuckUiState.Success -> JokeCard(joke = chuckUiState.listChuck,retryAction)
     is ChuckUiState.Error -> ErrorScreen(retryAction)
 }
 }
