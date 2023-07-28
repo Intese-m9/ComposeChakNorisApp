@@ -7,10 +7,11 @@ object RetrofitHelper {
     const val baseUrl = "https://api.chucknorris.io/"
     private fun getInstance():Retrofit{
         return Retrofit.Builder()
+            .baseUrl(baseUrl)
             .addConverterFactory(GsonConverterFactory.create())
             .build()
     }
-    private val retrofitApi by lazy{
+     val retrofitApi: ApiService by lazy{
         getInstance().create(ApiService::class.java)
     }
 }

@@ -3,6 +3,7 @@ package com.example.composechucknorisapp.data.di
 import com.example.composechucknorisapp.data.api.ApiService
 import com.example.composechucknorisapp.data.repository.NetworkRepository
 import com.example.composechucknorisapp.data.repository.NetworkRepositoryRandomJokes
+import dagger.Component
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -14,7 +15,7 @@ import javax.inject.Singleton
 class DataModule {
     @Provides
     @Singleton
-    fun provideRepositoryChuck(apiService: ApiService):NetworkRepositoryRandomJokes{
-        return NetworkRepositoryRandomJokes(apiService)
+    fun provideRepositoryChuck():NetworkRepositoryRandomJokes{
+        return NetworkRepositoryRandomJokes()
     }
 }
