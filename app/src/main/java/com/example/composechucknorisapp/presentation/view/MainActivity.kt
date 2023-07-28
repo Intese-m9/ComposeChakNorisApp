@@ -7,11 +7,8 @@ import androidx.activity.viewModels
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
-import androidx.compose.material3.Text
-import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
-import androidx.lifecycle.ViewModel
+
 import com.example.composechucknorisapp.presentation.ui.theme.ComposeChakNorisAppTheme
 import com.example.composechucknorisapp.presentation.viewmodel.ChuckViewModel
 import dagger.hilt.android.AndroidEntryPoint
@@ -28,7 +25,7 @@ class MainActivity : ComponentActivity() {
                     color = MaterialTheme.colorScheme.background
                 ) {
                     val chuckViewModel: ChuckViewModel by viewModels()
-                    HomeScreen(chuckUiState = chuckViewModel.chuckUiState, retryAction = { /*TODO*/ }, modifier = Modifier)
+                    HomeScreen(chuckUiState = chuckViewModel.chuckUiState, retryAction = { /*TODO*/ })
                 }
             }
         }
